@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Winter Dictionary</title>
+        <meta name="Author" content="Isaac Kidy's">
+        <meta charset="utf-8">
+        <link href="dict_style.css" rel="stylesheet">
+        <script src="dict_javaScript.js"></script>
+    </head>
+    <body>
+     <div id="div1000">
+        <div id="div1001">
+            <h1 id="h110"> Web Design</h1>
+            <footer id="foot10">developed by Isaac</footer>
+           
+            <div id="div1002">
+                <button id="btn_10"> click me</button>
+                <h2 id="h2_01">body color:</h2>
+                <h2 id="h2_02">rgb(211 225 249)</h5>
+            </div>
+            <div id="div1003">
+                <form id="form10">
+                    <h4 id="h401"> Text input</h4>
+                    Name : <input type="text" name="user_name" size="7" value="e.g. Mehari27" maxlength="10"><br>
+                    password : <input type="password" name="user_pass" ><br>
+                    
+                    <h4 id="h402"> Radio Button: name should be same</h4>
+                    <input type="radio" name="r_gender"> Male
+                    <input type="radio" name="r_gender"> Female
+                    <input type="radio" name="r_gender"> Infant
+
+                    <h4 id="h402"> check box : name should be different</h4>
+                    <input type="checkbox" name="c_male"> Male
+                    <input type="checkbox" name="c_female"> Female
+                    <input type="checkbox" name="c_infant"> Infant
+
+                    <h4 id="h403"> Select box : drop-down</h4>
+                    <select name="s_box">
+                        <option value="s_male">Male</option>
+                        <option value="s_female">Female</option>
+                        <option value="s_male">Infant</option>
+                    </select>
+
+                    <h4 id="h404"> Select box : scroll</h4>
+                    <select name="s_box" size="3" multiple>
+                        <option value="s_male" selected>Male</option>
+                        <option value="s_female">Female</option>
+                        <option value="s_male">Infant</option>
+                        <option value="s_male" selected>Male 1</option>
+                        <option value="s_female">Female 1</option>
+                        <option value="s_male">Infant 1</option>
+                        <option value="s_male" selected>Male 2</option>
+                        <option value="s_female">Female 2</option>
+                        <option value="s_male">Infant 2</option>
+                    </select>
+                   
+                    <h4> Text area</h4>
+                    <textarea rows="5" cols="50" name="txt_area"> Initial Text 
+                        x = 2
+                        y = 3
+                    </textarea>
+
+                </form>
+                <h3>Table</h3>
+                <table id="tab_01" border="1px">
+                    <tr>
+                        <th>course</th>
+                        <th>day</th>
+                    </tr>
+                    <tr>
+                        <td>MTT204</td>
+                        <td>Mon, Wedn</td>
+                    </tr>
+                    <tr>
+                        <td>CSC202</td>
+                        <td>Mon, Wedn</td>
+                    </tr>
+                    <tr>
+                        <td>CSC303</td>
+                        <td>Tues, Thurs </td>
+                    </tr>
+                </table>
+
+                <h3>Nested list</h3>
+
+                <ul>
+                    <li>Course</li>
+                    <ol>
+                        <li>FWS305</li>
+                        <ol >
+                            <li>Monday</li>
+                                <ul>
+                                    <li>6:40pm</li>
+                                    <li>8:40pm</li>
+                                </ul>
+                            <li>Wednesday</li>
+                            <ul>
+                                <li>6:40pm</li>
+                                <li>8:40pm</li>
+                            </ul>
+                        </ol>
+                        <li>CSC202</li>
+                        <ol>
+                            <li>Monday</li>
+                            <ul>
+                               <li>3:00pm</li>
+                               <li>5:00pm</li>
+                            </ul>
+                          
+                           
+                        </ol>
+                        <li>CSC303</li>
+                        <ol>
+                            <li>Tuesday & Thursday</li>
+                            <ul>
+                                <li>3:00pm</li>
+                                <li>11:35pm</li>
+                            </ul>
+                        </ol>
+                        <li>MTT204</li>
+                        <ol>
+                            <li>Tuesday & Thursday</li>
+                            <ul>4:50pm - 6:35pm</ul>
+                        </ol>
+                        
+                    </ol>
+                    <li>Movies</li>
+                </ul>
+            </div>
+        </div>
+     </div> 
+     
+     <script>
+        // var heading = document.querySelector('h1');
+        // var box = document.querySelector('button');
+
+        // box.addEventListener('mouseover', function(){
+        //     heading.innerHTML = "Web Programming";
+        // });
+    const btn = document.querySelector("button");
+    const tellColor = document.getElementById('h2_02');
+
+    function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+    }
+
+    btn.addEventListener("click", () => {
+        const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+        document.body.style.backgroundColor = rndCol;
+        console.log(rndCol);
+        tellColor.innerHTML = rndCol;
+        
+
+    });
+   
+
+
+     </script>
+    </body>
+</html>
